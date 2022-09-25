@@ -12,8 +12,6 @@ import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,7 +27,6 @@ public class Employee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@JsonIgnore
 	private int id;
 	@NotBlank(message = "Name cannot be blank!")
 	@Column(name = "emp_name")
